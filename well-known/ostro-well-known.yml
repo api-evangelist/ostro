@@ -1,0 +1,49 @@
+generated: '2026-08-26'
+method: probed
+source: https://ostro.veeva.com/.well-known/
+note: >-
+  Probed the .well-known discovery surface on Ostro's live website host
+  (ostro.veeva.com, where ostrohealth.com and ostro.ai both redirect). Every
+  path returned a real HTTP 404 with an 88-byte body, so this host is NOT a
+  soft-404 catch-all — the absence is genuine. hit_count is 0, therefore NO
+  WellKnown and NO SecurityTxt pointer is emitted in apis.yml. The one
+  machine-readable document Ostro does serve is /llms.txt (200,
+  text/plain, 11,175 bytes), captured verbatim in llms/ostro-llms.txt.
+hit_count: 0
+hosts:
+- host: https://ostro.veeva.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://www.ostrohealth.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+x-other-probes:
+- url: https://ostro.veeva.com/llms.txt
+  status: 200
+  content_type: text/plain; charset=utf-8
+  bytes: 11175
+  file: ../llms/ostro-llms.txt
+- url: https://ostro.veeva.com/robots.txt
+  status: 200
+  bytes: 0
+  note: served but empty
+- url: https://ostro.veeva.com/sitemap.xml
+  status: 404
+- url: https://ostro.veeva.com/openapi.json
+  status: 404

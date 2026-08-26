@@ -1,0 +1,19 @@
+generated: '2026-08-26'
+method: searched
+source: https://ostro.veeva.com/schedule-a-demo/form
+plan_count: 0
+pricing_model: enterprise-contact-sales
+note: >-
+  Ostro publishes no pricing page and no self-serve plans. https://ostro.veeva.com/pricing
+  returns 404 and the only commercial entry point on the site is the
+  "Schedule a Demo" form (HTTP 200). Ostro sells an enterprise engagement
+  platform to pharmaceutical, biotech and medical-device brands; pricing is
+  negotiated, and since the March 2026 Veeva Systems acquisition it is sold
+  alongside Veeva Commercial Cloud. plan_count 0 is an observed absence,
+  not an unchecked field.
+plans: []
+evidence:
+- url: https://ostro.veeva.com/pricing
+  status: 404
+- url: https://ostro.veeva.com/schedule-a-demo/form
+  status: 200

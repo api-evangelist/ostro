@@ -1,17 +1,35 @@
 aid: ostro
 name: Ostro
-description: 'Ostro is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Ostro (Veeva Ostro) is an AI-powered brand engagement platform for life
+  sciences. Founded in 2019 as RxDefine and legally incorporated as Rise Healthcare
+  Tech, Inc., the Miami-based, remote-first company turns a pharmaceutical brand''s
+  existing PRC/MLR-approved content into compliant, two-way conversational AI across
+  web, email and SMS. Its products are Navigate (web engagement), Airmark (conversational
+  email for HCPs), Prompt (SMS) and Tailor (brand-website intelligence), unified in
+  September 2025 into a single digital experience. The platform is grounded exclusively
+  in approved content and is designed not to generate novel responses, which is how
+  it clears promotional-review requirements. Veeva Systems (NYSE: VEEV) acquired Ostro
+  on 2026-03-10 for approximately $100M and runs it as an independent unit whose
+  capabilities are being folded into Veeva Commercial Cloud. Ostro publishes no public
+  developer program, API reference or machine-readable contract; its only machine-readable
+  surface is an llms.txt served at its own website root.'
+image: https://cdn.prod.website-files.com/634f008d7831c61867845aad/69dd6a20fe40f5dff2a56a40_Veeva-Ostro-Open-Graph.png
 url: https://raw.githubusercontent.com/api-evangelist/ostro/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Life Sciences
+- Pharmaceuticals
+- Healthcare
+- Artificial Intelligence
+- Conversational AI
+- Patient Engagement
+- Marketing
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,57 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ostro-domain-security.yml
 - type: Website
+  url: https://ostro.veeva.com/
+- type: LLMsTxt
+  url: llms/ostro-llms.txt
+- type: Blog
+  url: https://ostro.veeva.com/news
+- type: TermsOfService
+  url: https://ostro.veeva.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://ostro.veeva.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/ostrohealth
+- type: Plans
+  url: plans/ostro-plans-pricing.yml
+- type: ParentCompany
+  url: https://www.veeva.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/veeva-ostro
+- type: Careers
+  url: https://ostro.veeva.com/careers
+- type: About
+  url: https://ostro.veeva.com/company
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/ostro_stock/
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Ostro sells a managed AI brand-engagement platform to pharma marketing teams
+    and ships nothing to developers — ostro.veeva.com has no /developers, /docs,
+    /pricing or API reference, no api./developer./docs. subdomain resolves on
+    ostrohealth.com, and the ostrohealth GitHub org holds only a Webflow export
+    and a job-descriptions repo.
+  evidence:
+  - url: https://ostro.veeva.com/openapi.json
+    status: 404
+  - url: https://ostro.veeva.com/.well-known/api-catalog
+    status: 404
+  - url: https://ostro.veeva.com/pricing
+    status: 404
+  - url: https://api.ostrohealth.com/
+    status: 0
+  - url: https://api.github.com/orgs/ostrohealth/repos
+    status: 200
+  - url: https://ostro.veeva.com/llms.txt
+    status: 200
+  checked: '2026-08-26'
