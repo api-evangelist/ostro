@@ -13,6 +13,17 @@ description: 'Ostro (Veeva Ostro) is an AI-powered brand engagement platform for
   capabilities are being folded into Veeva Commercial Cloud. Ostro publishes no public
   developer program, API reference or machine-readable contract; its only machine-readable
   surface is an llms.txt served at its own website root.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/634f008d7831c61867845aad/69dd6a20fe40f5dff2a56a40_Veeva-Ostro-Open-Graph.png
 url: https://raw.githubusercontent.com/api-evangelist/ostro/refs/heads/main/apis.yml
 x-type: company
