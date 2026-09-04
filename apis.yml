@@ -24,6 +24,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/634f008d7831c61867845aad/69dd6a20fe40f5dff2a56a40_Veeva-Ostro-Open-Graph.png
 url: https://raw.githubusercontent.com/api-evangelist/ostro/refs/heads/main/apis.yml
 x-type: company
